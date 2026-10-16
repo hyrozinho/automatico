@@ -15,7 +15,7 @@ REGRA ABSOLUTA: assim que o usuario digitar `/automatico`, a PRIMEIRA e UNICA co
 ```
 ============================================
    LOW TICKET AUTOMATIZADO v1.0
-   by @adsborba
+   by @ogestorsantiago_
 ============================================
 
   [1] Setup & Diagnostico
@@ -2170,7 +2170,7 @@ Se [T]: abrir o link do checkout via dev-browser pra conferir se ta tudo certo.
 ## [8] META ADS
 
 ### Objetivo
-Criar pixel, subir campanhas e otimizar via Meta Marketing API. Sem Advantage+, campanha de vendas manual, config baseada no modelo validado do @adsborba.
+Criar pixel, subir campanhas e otimizar via Meta Marketing API. Sem Advantage+, campanha de vendas manual, config baseada no modelo validado do @ogestorsantiago_.
 
 ### Fluxo
 
@@ -2285,7 +2285,7 @@ Descricao (opcional):
 ESTRUTURA DA CAMPANHA
 ======================
 
-Estrutura padrao recomendada (@adsborba):
+Estrutura padrao recomendada (@ogestorsantiago_):
 
   ✦ 1-1-1 ABO (1 campanha, 1 conjunto, 1 criativo)
   ✦ Orcamento = ticket do produto (R$27 produto = R$27/dia)
@@ -2420,7 +2420,7 @@ Campanha criada!
 
 Se [P]: ativar via POST `/{campaign_id}` com status=ACTIVE.
 
-**Config padrao da campanha (baseado na operacao real @adsborba):**
+**Config padrao da campanha (baseado na operacao real @ogestorsantiago_):**
 
 CAMPANHA:
 - Objetivo: Vendas (OUTCOME_SALES)
@@ -2464,7 +2464,7 @@ OTIMIZAR CAMPANHAS
 
 Qual metodo de otimizacao?
 
-  [A] Metodo @adsborba (janela de 2h, dobra automatico)
+  [A] Metodo @ogestorsantiago_ (janela de 2h, dobra automatico)
   [B] Metodo CPA (matar/escalar por CPA ideal)
   [C] Manual (so mostrar dashboard, eu decido)
 
@@ -2473,7 +2473,7 @@ Qual opcao?
 
 ---
 
-#### METODO A — @adsborba (RECOMENDADO)
+#### METODO A — @ogestorsantiago_ (RECOMENDADO)
 
 **Logica:** Monitoramento continuo em janelas de 2 horas. A cada janela, verifica se a campanha vendeu e decide se dobra o orcamento. Roda no automatico ate o usuario parar.
 
@@ -2488,7 +2488,7 @@ Qual opcao?
 ##### Passo 1 — Configuracao inicial
 
 ```
-METODO @ADSBORBA — OTIMIZACAO AUTOMATICA
+METODO @ogestorsantiago_ — OTIMIZACAO AUTOMATICA
 ==========================================
 
 Ticket do produto front (R$):
@@ -2537,7 +2537,7 @@ Depois de confirmar, o sistema entra em modo de monitoramento continuo:
 ```
 OTIMIZACAO AUTOMATICA ATIVADA
 ===============================
-Metodo: @adsborba (janela 2h)
+Metodo: @ogestorsantiago_ (janela 2h)
 Inicio: [horario informado]
 Campanhas: [X] monitoradas
 Ticket: R$[preco]
@@ -2606,7 +2606,7 @@ O loop continua ate:
 - Todas as campanhas forem pausadas
 - Passar das 23h (horario limite — lembrar o usuario)
 
-##### Regras detalhadas do metodo @adsborba
+##### Regras detalhadas do metodo @ogestorsantiago_
 
 ```
 REGRAS DE DECISAO POR JANELA DE 2H

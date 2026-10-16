@@ -2,7 +2,7 @@
 
 Skill pro [Claude Code](https://claude.ai/claude-code) que transforma operacao de low ticket digital num software interativo. Mineracao de ofertas escaladas, modelagem de funil, geracao de criativos, cadastro em gateway e otimizacao de campanhas — tudo dentro do terminal.
 
-**by [@adsborba](https://instagram.com/adsborba)**
+**by [@ogestorsantiago_](https://instagram.com/ogestorsantiago_)**
 
 ## O que faz
 
@@ -15,23 +15,49 @@ Skill pro [Claude Code](https://claude.ai/claude-code) que transforma operacao d
 | [5] Funil | Modela pagina de vendas a partir do concorrente |
 | [6] Criativos | Scrapa ads reais, transcreve, gera 7 criativos modelados |
 | [7] Gateway | Cadastra produto na Wiapy automaticamente |
-| [8] Meta Ads | Cria pixel, campanha e otimiza (metodo @adsborba) |
+| [8] Meta Ads | Cria pixel, campanha e otimiza (metodo @ogestorsantiago_) |
 | [9] Config | Diagnostico, instalacao, metricas |
 
 ## Instalacao
 
-1. Copie a pasta `automatico/` pra `~/.claude/skills/automatico/`
-2. Copie `config-automatico.example.json` pra `config-automatico.json` no seu diretorio de trabalho
-3. Preencha suas credenciais no `config-automatico.json`
-4. No Claude Code, digite `/automatico`
+### Windows (PowerShell)
+
+```powershell
+# Baixar o repositorio
+git clone https://github.com/guifln2007/automatico.git
+
+# Instalar a skill para sua conta do Claude Code
+New-Item -ItemType Directory -Force "$HOME/.claude/skills/automatico" | Out-Null
+Copy-Item -Path ".\automatico\*" -Destination "$HOME/.claude/skills/automatico" -Recurse -Force
+
+# Criar a configuracao local do projeto (nao compartilhe esse arquivo)
+Copy-Item ".\automatico\config-automatico.example.json" ".\automatico\config-automatico.json"
+
+# Entrar no projeto e iniciar o Claude Code
+Set-Location .\automatico
+claude
+```
+
+### macOS / Linux (Bash)
 
 ```bash
-# Copiar skill
-cp -r automatico ~/.claude/skills/automatico
-
-# Criar config
-cp config-automatico.example.json config-automatico.json
+git clone https://github.com/guifln2007/automatico.git
+mkdir -p "$HOME/.claude/skills/automatico"
+cp -R automatico/. "$HOME/.claude/skills/automatico/"
+cp automatico/config-automatico.example.json automatico/config-automatico.json
+cd automatico
+claude
 ```
+
+No Claude Code, digite `/automatico` e escolha `[1] Setup & Diagnostico`. O arquivo `config-automatico.json` fica no diretorio do projeto em que o Claude Code foi iniciado; preencha nele apenas as credenciais dos servicos que for usar. Ele esta no `.gitignore` e nao deve ser enviado ao GitHub.
+
+Para testar uma alteracao em `SKILL.md` no checkout, atualize a copia instalada antes de abrir o Claude Code:
+
+```powershell
+Copy-Item ".\SKILL.md" "$HOME/.claude/skills/automatico/SKILL.md" -Force
+```
+
+O Claude Code carrega a skill instalada nesse caminho. Execute o Claude Code a partir da pasta do projeto para que `config-automatico.json` fique nesse projeto.
 
 ## Dependencias
 
