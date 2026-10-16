@@ -24,7 +24,7 @@ Skill pro [Claude Code](https://claude.ai/claude-code) que transforma operacao d
 
 ```powershell
 # Baixar o repositorio
-git clone https://github.com/guifln2007/automatico.git
+git clone https://github.com/hyrozinho/automatico.git
 
 # Instalar a skill para sua conta do Claude Code
 New-Item -ItemType Directory -Force "$HOME/.claude/skills/automatico" | Out-Null
@@ -41,7 +41,7 @@ claude
 ### macOS / Linux (Bash)
 
 ```bash
-git clone https://github.com/guifln2007/automatico.git
+git clone https://github.com/hyrozinho/automatico.git
 mkdir -p "$HOME/.claude/skills/automatico"
 cp -R automatico/. "$HOME/.claude/skills/automatico/"
 cp automatico/config-automatico.example.json automatico/config-automatico.json
